@@ -1,0 +1,44 @@
+<div class="images">
+
+  <img src="watch1.jpg" alt="ساعة">
+  <img src="watch2.jpg" alt="مجموعة ساعات">
+
+</div>
+
+<style>
+.images {
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+  gap: 15px;
+  padding: 15px;
+  background: white;
+}
+
+.images img {
+  width: 100%;
+  height: auto;
+  max-height: 600px;
+  object-fit: contain;
+  display: block;
+  border-radius: 12px;
+
+  /* يمنع قص الصورة */
+  image-rendering: auto;
+
+  /* تحسين عرض الصورة */
+  background: #f5f5f5;
+}
+
+/* الهاتف */
+@media (max-width: 600px) {
+  .images {
+    grid-template-columns: 1fr;
+  }
+
+  .images img {
+    width: 100%;
+    height: auto;
+    max-height: none;
+  }
+}
+</style>
